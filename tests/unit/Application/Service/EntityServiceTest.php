@@ -74,12 +74,12 @@ class EntityServiceTest extends MockeryTestCase
 
         $manageConfigTest = m::mock(Config::class);
         $manageConfigTest
-            ->shouldReceive('getPublicationStatus->getCreateStatus')
+            ->shouldReceive('getPublicationStatus')
             ->andReturn('testaccepted');
 
         $manageConfigProd = m::mock(Config::class);
         $manageConfigProd
-            ->shouldReceive('getPublicationStatus->getCreateStatus')
+            ->shouldReceive('getPublicationStatus')
             ->andReturn('prodaccepted');
 
         $this->router = m::mock(RouterInterface::class);
